@@ -7,20 +7,11 @@
 
 html,
 body {
-  height: 100%;
+  height: 100vh;
   width: 100%;
 }
-// #cursor {
-//   height: 20px;
-//   width: 20px;
-//   background-color: #95c11e;
-//   border-radius: 50%;
-//   position: fixed;
-//   z-index: 99;
-//   transition: all linear 0.07s;
-// }
 #cursor{
-    height: 60px;
+  height: 60px;
   width: 60px;
   background-color: #96c11e78;
   border-radius: 50%;
@@ -29,6 +20,7 @@ body {
   transition: all linear 0.01s;
   filter: blur(10px);
 }
+
 #cursor-blur {
   height: 300px;
   width: 300px;
@@ -135,11 +127,10 @@ video {
 
   #page-2 {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     z-index: 10;
 
     #scroller {
-      /* background-color: red; */
       white-space: nowrap;
       overflow-x: auto;
       overflow-y: hidden;
@@ -186,8 +177,15 @@ video {
             color: transparent;
             -webkit-text-stroke: 2px #95c11e;
         }
+      
       }
+      h4:hover{
+        -webkit-text-fill-color: #95c11e;
+
+      }
+      
     }
+
 
     @keyframes scroll {
       from {
@@ -197,5 +195,83 @@ video {
         transform: translateX(-100%);
       }
     }
+  }
+}
+
+
+#about-us{
+  height: 50vh;
+  width: 100%;
+  position: relative;
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  z-index: 15;
+  justify-content: space-around;
+
+ img{
+   height: 180px;
+   width: 180px;
+   border-radius: 10px;
+   object-fit: cover;
+   margin-top: 40px;
+
+ }
+
+  #about-us-in{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h3{
+      font-size: 54px;
+      font-weight: 800;
+      margin-bottom: 30px;
+      color: whitesmoke;
+      -webkit-text-stroke: 2px #95c11e;
+    }
+    p{
+      font-size: 20px;
+      line-height: 26px;
+      color: whitesmoke;
+
+    }
+
+  }
+}
+
+
+
+
+.cards-container{
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 70px;
+  position: relative;
+  z-index: 10;
+
+
+  .cards{
+  height: 80%;
+  width: 24%;
+  border-radius: 20px;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  transition: all ease 0.6s;
+
+  }
+  #card1 {
+    background-image: url(https://plus.unsplash.com/premium_photo-1688429242682-f44a08118d8e?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+  }
+  #card2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+  }
+  #card3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
   }
 }

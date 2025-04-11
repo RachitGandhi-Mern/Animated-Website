@@ -2,7 +2,7 @@
 
 
 // Ensure you registered ScrollTrigger
-gsap.registerPlugin(ScrollTrigger);
+gsap.registerPlugin(ScrollTrigger); 
 
 gsap.to("#nav", {
   backgroundColor: "#171716f4",
@@ -12,11 +12,12 @@ gsap.to("#nav", {
     trigger: "#nav",
     scroller: "body", // only needed if using something like LocomotiveScroll
     // markers: true,
-    start: "top top", // Fires when #nav hits the top of the viewport
-    end: "top -100px", // Small scroll window (or make it larger)
+    start: "top -10", // Fires when #nav hits the top of the viewport
+    end: "top -11px", // Small scroll window (or make it larger)
     scrub: 1,
   },
 });
+
 
 gsap.to("#main", {
   backgroundColor: "#000",
@@ -39,3 +40,5 @@ document.addEventListener("mousemove", function(dets){
     crsblr.style.left =dets.x -200 +"px";
     crsblr.style.top =dets.y -200 +"px";
 });
+
+
