@@ -19,6 +19,7 @@ body {
   z-index: 99;
   transition: all linear 0.01s;
   filter: blur(10px);
+
 }
 
 #cursor-blur {
@@ -294,7 +295,7 @@ video {
 
   .overlay{
     height: 100%;
-    width: 100%;
+    width: 101%;
     background-color: #95c11e;
     padding: 10px;
     padding-top: 40px;
@@ -339,4 +340,145 @@ video {
   
     }
 
+}
+
+#green-div {
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left bottom, #2dc357, #95c11e);
+  margin-top: 40px;
+  
+  h4 {
+    width: 45%;
+    line-height: 50px;
+    color: #000;
+    text-align: center;
+    font-weight: 800;
+    font-size: 27px;
+    text-transform: uppercase;
+
+  }
+  img {
+    height: 100%;
+    object-fit: cover;
+    width: 11%;
+    filter: blur(0.5px);
+  }
+}
+
+.fad{
+  height: 90vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 20px;
+
+  .dot-2{
+    height: 90%;
+    position: absolute;
+    border: none;
+    width: 200px;
+    left: 20px;;
+
+  }
+
+  img{
+    height:60%;
+    width: 60%;
+    margin-left: 30px;
+    border:1px solid  #95c11e;
+    object-fit: cover;
+    border-radius: 20px;
+    z-index: 10;
+
+
+    
+  }
+
+  .fad-content{
+    height: 100%;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 25px;
+    padding: 40px;
+
+    h2{
+      color: #fff;
+      font-weight: 900;
+      -webkit-text-stroke: 1px #95c11e;
+    }
+    p{
+      // text-align: center;
+      color: #fff;
+      line-height: 25px;
+      width: 90%;
+    }
+    button{
+      height: 40px;
+      width: 130px;
+      border-radius:25px;
+      border: 2px solid  #95c11e;
+      background-color: #000;
+      color: #fff;
+      z-index: 10;
+
+
+
+      &:hover{
+        scale: 1.1;
+        transition: all 1s ease-out;
+        color: orangered;
+      }
+    }
+  }
+}
+
+#page3 {
+  height: 100vh;
+  width: 100%;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  position: relative;
+  justify-content: center;
+
+  p {
+    font-size: 35px;
+    font-weight: 700;
+    width: 60%;
+    line-height: 45px;
+    text-align: center;
+    color: whitesmoke;
+    animation: slideMove 2.5s ease-in-out infinite;
+  }
+  @keyframes slideMove {
+    0% {
+      transform: translate(0, 0);
+    }
+    50% {
+      transform: translate(-1%, -1%);
+    }
+    100% {
+      transform: translate(0, 0);
+    }
+  }
+  img {
+    position: absolute;
+    height: 60px;
+  }
+  #colon1 {
+    left: 13%;
+    top: 25%;
+  }
+  #colon2 {
+    bottom: 30%;
+    right: 12%;
+  }
 }

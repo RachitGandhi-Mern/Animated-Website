@@ -42,3 +42,53 @@ document.addEventListener("mousemove", function(dets){
 });
 
 
+
+// var h4all = document.querySelectorAll("#nav h4");
+
+// h4all.forEach(function (elem) {
+//   elem.addEventListener("mouseenter", function(){
+//     crs.style.transform = "scale(3)";
+//     crs.style.border = "1px solid white";
+//     crs.style.backgroundColor = "transparent";
+//     crs.style.opacity = 1;
+//   });
+//   elem.addEventListener("mouseleave", function(){
+//     crs.style.transform = "scale(1)";
+//     crs.style.border = "0px solid #96c11e78";
+//     crs.style.backgroundColor = "#96c11e78";
+//   });
+// });
+
+
+
+
+// below code by chat-gpt 
+
+var crs = document.querySelector("#cursor");
+var crsblr = document.querySelector("#cursor-blur");
+
+document.addEventListener("mousemove", function(dets){
+    crs.style.left = dets.x + "px";
+    crs.style.top = dets.y + "px";
+    crsblr.style.left = (dets.x - 200) + "px";
+    crsblr.style.top = (dets.y - 200) + "px";
+});
+
+var h4all = document.querySelectorAll("#nav");
+h4all.forEach(function (elem) {
+  elem.addEventListener("mouseenter", function(){
+    crs.style.transform = "scale(1.1)";
+    crs.style.border = "2px solid white";
+    crs.style.backgroundColor = "transparent";
+    crs.style.filter = "blur(0)"
+    crsblr.style.display ="None"
+  });
+  elem.addEventListener("mouseleave", function(){
+    crs.style.transform = "scale(1)";
+    crs.style.border = "0px solid #96c11e78";
+    crs.style.backgroundColor = "#96c11e78";
+    crs.style.filter = "blur(10px)"
+    crsblr.style.display ="block"
+
+  });
+});
