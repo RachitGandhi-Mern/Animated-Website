@@ -2,7 +2,7 @@
 gsap.registerPlugin(ScrollTrigger); 
 
 gsap.to("#nav", {
-  backgroundColor: "#171716f4",
+  backgroundColor: "#0d0d0d",
   duration: 0.5,
   height: "110px",
   scrollTrigger: {

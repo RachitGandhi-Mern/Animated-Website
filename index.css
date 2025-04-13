@@ -484,4 +484,75 @@ video {
 #page4 .elem:hover h2 {
   color: #fff;
   background-color: transparent;
+}
+
+#footer {
+  height: 40vh;
+  width: 100%;
+  background: linear-gradient(to left bottom, #119f3a 0%, #a3d421 80%);
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 6.5vw;
+  padding: 0 100px;
+}
+#footer img {
+  position: absolute;
+  left: 0;
+  height: 100%;
+  z-index: 0;
+}
+#footer #f1 {
+  width: 25%;
+  position: relative;
+  z-index: 99;
+  background-color: red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#footer #f1 img {
+  height: 100px;
+}
+#footer #f2 {
+  width: 25%;
+  position: relative;
+  z-index: 99;
+}
+#footer #f2 h3 {
+  font-size: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 900;
+  margin-bottom: 8px;
+}
+#footer #f3 {
+  width: 25%;
+  position: relative;
+  z-index: 99;
+}
+#footer #f3 h3 {
+  font-size: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 800;
+  margin-bottom: 8px;
+}
+#footer #f4 {
+  width: 25%;
+  position: relative;
+  z-index: 99;
+}
+#footer #f4 h4 {
+  font-size: 20px;
+  white-space: nowrap;
+  text-transform: uppercase;
+  color: #000;
+  font-weight: 600;
+  line-height: 20px;
+  margin-bottom: 8px;
+  text-align: left;
 }/*# sourceMappingURL=index.css.map */
