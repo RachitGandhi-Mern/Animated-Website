@@ -15,12 +15,23 @@ body {
   width: 60px;
   background-color: #96c11e78;
   border-radius: 50%;
+  // animation: popIn 1s ease-out forwards;
   position: fixed;
   z-index: 99;
   transition: all linear 0.01s;
   filter: blur(10px);
-
 }
+// @keyframes popIn{
+//   0%{
+//   transform: scale(0) translateY(50px);
+//   opacity: 0;
+//   }
+//   100%{
+//     transform: scale(1) translateY(0);
+//     opacity: 1;
+//   }
+
+// }
 
 #cursor-blur {
   height: 300px;
@@ -350,6 +361,7 @@ video {
   background: linear-gradient(to left bottom, #2dc357, #95c11e);
   margin-top: 40px;
   
+
   h4 {
     width: 45%;
     line-height: 50px;
@@ -386,16 +398,28 @@ video {
 
   }
 
-  img{
+  .slider{
     height:60%;
     width: 60%;
     margin-left: 30px;
     border:1px solid  #95c11e;
-    object-fit: cover;
+    // object-fit: cover;
     border-radius: 20px;
     z-index: 10;
+    position: relative;
+    overflow: hidden;
 
-
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 20px;
+      display: none;
+      position: absolute;
+    }
+    img.active{
+      display: block;
+    }
     
   }
 
@@ -480,5 +504,55 @@ video {
   #colon2 {
     bottom: 30%;
     right: 12%;
+  }
+}
+#page4{
+  height: 50vh;
+  width: 100%;
+  display: flex;
+  // justify-content: space-around;
+  justify-content: center;
+  align-items: center;
+  // background-color: #fff;
+  // padding: 20px;
+  gap: 30px;
+
+  .elem{
+    width: 30%;
+    height: 60%;
+    border: 2px solid #95c11e;
+    border-radius: 25px;
+    overflow: hidden;
+    position: relative;
+
+    img{
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+      border-radius: 25px;
+      object-position: center;
+    }
+    h2{
+      height: 100%;
+      width: 100%;
+      background-color: #95c11e;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: black;
+      position: absolute;
+      z-index: 10;
+      transition: all 0.5s ease-out;
+      -webkit-text-stroke: 0.5px white;
+    }
+
+  }
+  .elem:hover h2{
+    color: #fff;
+    background-color: transparent;
+    // opacity: 0;
+  
   }
 }
